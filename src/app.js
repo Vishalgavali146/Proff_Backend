@@ -1,5 +1,22 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants"
+import express from  "express"
+import cors from "cors"
+import cookieParser from "cookie-parser"//accept and set cookies
+
+const app = express()
+
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    Credential: true
+}))
+
+app.use(express.json({limit: "16kb"}))
+app.use(express.urlencoded({extende: true, limit: "16kb"}))
+app.use(express.static("public"))//store public assets
+
+app.use(cookieParser())
+
+
+export {app}
 
 
 
