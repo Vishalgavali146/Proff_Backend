@@ -1,5 +1,5 @@
 import mongoose , {Schema} from "mongoose";
-import jwt from "jsonwebtoken" // jwt is bearer tolen
+import jwt from "jsonwebtoken" // jwt is bearer tool
 import bcrypt from "bcrypt"
 
 const userSchema =  new Schema(
