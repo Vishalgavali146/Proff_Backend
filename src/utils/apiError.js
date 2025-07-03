@@ -13,7 +13,7 @@ class ApiError extends Error {
         this.errors = errors
 
         if(statck) {
-            this.statck = statckv// check 
+            this.statck = statck// check 
         }else{
             Error.captureStackTrace(this, this.constructor)
         }
